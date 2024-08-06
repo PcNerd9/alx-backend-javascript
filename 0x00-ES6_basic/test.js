@@ -1,11 +1,3 @@
-import createEmployeesObject from "./11-createEmployeesObject";
-import createReportObject from "./12-createReportObject";
+import { taskFirst, taskNext } from './0-constants.js';
 
-const employees = {
-    ...createEmployeesObject('engineering', ['Bob', 'Jane']),
-    ...createEmployeesObject("marketing", ['Sylvie'])
-};
-
-const report = createReportObject(employees);
-console.log(report.allEmployees);
-console.log(report.getNumberOfDepartment(report.allEmployees))
+console.log(`${taskFirst()} ${taskNext()}`);

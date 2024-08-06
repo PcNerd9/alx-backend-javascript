@@ -1,6 +1,6 @@
 export default function createReportObject(employeesList) {
     const employeeReport = {
-        allEmployees: employeesList,
+        allEmployees: { ...employeesList},
 
         getNumberOfDepartment(employeesList) {
             var counter = 0;

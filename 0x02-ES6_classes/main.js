@@ -1,3 +1,7 @@
-import initializeRooms from "./1-make_classrooms.js";
+import {listOfStudents, value} from "./9-hoisting.js";
+console.log(value);
+console.log(listOfStudents);
 
-console.log(initializeRooms());
+const listPrinted = listOfStudents.map(student => student.fullStudentDescription);
+
+console.log(listPrinted);

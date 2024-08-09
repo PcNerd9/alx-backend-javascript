@@ -1,7 +1,7 @@
-import HolbertonCourse from "./2-hbtn_course.js";
+import Pricing from "./4-pricing.js";
+import Currency from "./3-currency.js";
 
-const course = new HolbertonCourse("PHP", 10, ["Bob", "Jane"]);
-course.name = "Python";
-course.length = 20;
-course.students  = ["Habeeb"];
-console.log(course.students);
+const p = new Pricing(100, new Currency("EUR", "Euro"));
+console.log(p);
+console.log(p.displayFullPrice());
+

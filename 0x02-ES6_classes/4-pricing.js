@@ -42,4 +42,5 @@ export default class Pricing {
 
 	convertPrice(amount, conversionRate) {
 		return amount * conversionRate;
+	}
 }

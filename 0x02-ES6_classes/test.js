@@ -1,14 +1,7 @@
-import listOfStudents from "./9-hoisting.js";
+import EVCar from './100-evcar.js';
 
-test("fullStudentDescription returns the right strings", () => {
-  const listPrinted = listOfStudents.map(
-    student => student.fullStudentDescription
-  );
-  expect(listPrinted).toEqual([
-    'Guillaume Salva - 2020 - San Francisco',
-    'John Doe - 2020 - San Francisco',
-    'Albert Clinton - 2019 - San Francisco',
-    'Donald Bush - 2019 - San Francisco',
-    'Jason Sandler - 2019 - San Francisco',
-  ]);
-});
+const ec1 = new EVCar("Tesla", "Turbo", "Red", "250");
+console.log(ec1);
+
+const ec2 = ec1.cloneCar();
+console.log(ec2);

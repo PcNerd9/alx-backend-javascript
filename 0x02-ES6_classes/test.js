@@ -1,7 +1,10 @@
 import EVCar from './100-evcar.js';
+import Car from './10-car.js';
 
-const ec1 = new EVCar("Tesla", "Turbo", "Red", "250");
-console.log(ec1);
+test("Species is correctly implemented on EVCar", () => {
+    const tesla = new EVCar('Tesla', 'Electric', 'Red', '250');
+    const newCar = tesla.cloneCar();
 
-const ec2 = ec1.cloneCar();
-console.log(ec2);
+    expect(newCar instanceof EVCar).toBe(false);
+    expect(newCar instanceof Car).toBe(true);
+});

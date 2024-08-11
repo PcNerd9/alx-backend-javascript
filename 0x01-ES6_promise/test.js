@@ -1,10 +1,9 @@
-import handleResponseFromAPI from "./2-then";
+import handleProfileSignup from "./3-all";
 
-test("handleResponseFromAPI have a finally callback", async () => {
-  const spy = jest.spyOn(console, "warn").mockImplementation();
-
-  const promise = Promise.resolve();
-  await handleResponseFromAPI(promise);
-  expect(spy).toBeCalledWith("Got a response from the API");
-  spy.mockRestore();
-});
+test("handleProfileSignup returns the right text", async () => {
+    const spy = jest.spyOn(console, "log").mockImplementation();
+  
+    await handleProfileSignup();
+    expect(spy).toBeCalledWith('photo-profile-1 Guillaume Salva');
+    spy.mockRestore();
+  });

@@ -1,12 +1,14 @@
-import handleProfileSignup from './6-final-user';
+import guardrail from './9-try';
+import divideFunction from './8-try';
 
-test("handleProfileSignup returns the right array", async () => {
-    const queue = await handleProfileSignup('John', 'Doe', 'Gerald.jpg');
-    expect(queue).toEqual([
-      {
-        status: 'fulfilled',
-        value: { firstName: 'John', lastName: 'Doe' }
-      },
-      { status: 'rejected', value: 'Error: Gerald.jpg cannot be processed' }
+test("guardrail catch errors", () => {
+    expect(guardrail(() => { return divideFunction(10, 1)})).toEqual([
+      10,
+      'Guardrail was processed',
     ]);
-});
+  
+    expect(guardrail(() => { return divideFunction(10, 0)})).toEqual([
+      'Error: cannot divide by 0',
+      'Guardrail was processed',
+    ]);
+  });

@@ -1,8 +1,9 @@
-import updateUniqueItems from "./10-update_uniq_items.js";
-import groceriesList from "./9-groceries_list.js";
+import getListStudents from "./0-get_list_students.js";
 
-const map = groceriesList();
-console.log(map);
-
-updateUniqueItems(map);
-console.log(map);
+test("getListStudents is implemented correctly", () => {
+  expect(getListStudents()).toEqual([
+    { firstName: "Guillaume", id: 1, location: 'San Francisco' },
+    { firstName: "James", id: 2, location: 'Columbia' },
+    { firstName: "Serena", id: 5, location: 'San Francisco' }
+  ]);
+});

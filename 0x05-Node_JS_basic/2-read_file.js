@@ -22,7 +22,7 @@ function countStudents(path) {
         data_arr.forEach(data => {
             details[data[3]].push(data[0]);
         })
-        console.log("Number of students:", numberOfStudents);
+        console.log(`Number of students: ${numberOfStudents}`);
 
         for (let field in details) {
             console.log(`Number of students in ${field}: ${details[field].length}. List: ${details[field].join(", ")}`)

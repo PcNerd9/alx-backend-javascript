@@ -2,9 +2,15 @@ const { count } = require("console");
 const {readFileSync, read} = require("fs");
 
 function countStudents(path) {
+    let data;
     try {
-        const data = readFileSync(path, "utf-8");
-        let data_arr = data.split("\n").slice(1);
+        data = readFileSync(path, "utf-8");
+        
+    }
+    catch {
+        throw new Error("Cannot load the database")
+    }
+    let data_arr = data.split("\n").slice(1);
         data_arr = data_arr.map(data => data.split(","));
 
         const numberOfStudents = data_arr.length;
@@ -23,10 +29,6 @@ function countStudents(path) {
         }
         
         
-    }
-    catch {
-        throw new Error("Cannot load the database")
-    }
 
 }
 

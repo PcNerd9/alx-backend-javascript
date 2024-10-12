@@ -7,7 +7,7 @@ function countStudents(path) {
         data = readFileSync(path, "utf-8");
         
     }
-    catch {
+    catch (error) {
         throw new Error("Cannot load the database")
     }
     let data_arr = data.split("\n").slice(1);
@@ -32,4 +32,4 @@ function countStudents(path) {
 
 }
 
-module.exports =countStudents
+module.exports = countStudents

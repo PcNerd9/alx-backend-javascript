@@ -17,12 +17,10 @@ function countStudents(filepath) {
 
   records.forEach((record) => {
     const field = record.split(',');
-    if (field !== [] && field !== null) {
-      if (field[3] === 'CS') {
+    if (field[3] === 'CS') {
         cslist.push(field[0]);
-      } else if (field[3] === 'SWE') {
+    } else if (field[3] === 'SWE') {
         swelist.push(field[0]);
-      }
     }
   });
   console.log(`Number of students: ${cslist.length + swelist.length}`);

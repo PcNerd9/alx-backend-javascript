@@ -5,7 +5,7 @@ function readDatabase(path) {
 	return new Promise((resolve, reject) => {
 		readFile(path, "utf-8", (err, data) => {
 			if (err) {
-				reject(error);
+				reject(err);
 			} else {
 				const records = data.split('\n').slice(1);
             			const students = {};

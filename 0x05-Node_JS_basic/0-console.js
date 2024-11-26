@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 function displayMessage(data) {
-	process.stdout.write(data + "\n");
+	console.log(data);
 }
 
 module.exports = displayMessage;

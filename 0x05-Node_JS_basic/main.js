@@ -1,3 +1,4 @@
-const displayMessage = require("./0-console");
+const countStudents = require("./2-read_file");
 
-displayMessage(null);
+countStudents("./database.csv");
+

@@ -8,7 +8,7 @@ function calculateNumber(type, a, b) {
 		return Number(a.toFixed()) - Number(b.toFixed());
 	}
 	else if (type === "DIVIDE") {
-		if (b === 0) {
+		if (Number(b.toFixed()) === 0) {
 			return "Error";
 		}
 		else {

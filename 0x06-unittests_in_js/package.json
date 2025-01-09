@@ -2,6 +2,7 @@
   "name": "0x06-unittests_in_js",
   "version": "1.0.0",
   "description": "Unittesting in node js",
+  "type": "commonjs",
   "main": "0-calcul.js",
   "directories": {
     "test": "test"
@@ -14,5 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "mocha": "^10.8.2"
+  },
+  "dependencies": {
+    "chai": "^4.5.0"
   }
 }
